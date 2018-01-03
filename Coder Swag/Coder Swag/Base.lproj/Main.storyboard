@@ -12,6 +12,7 @@
     <customFonts key="customFonts">
         <array key="Avenir.ttc">
             <string>Avenir-Book</string>
+            <string>Avenir-Medium</string>
         </array>
     </customFonts>
     <scenes>
@@ -29,27 +30,30 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nB5-Mz-6wd">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nB5-Mz-6wd">
                                 <rect key="frame" x="0.0" y="73.5" width="375" height="529.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="120" id="VLV-dn-tQL" customClass="CategoryCell" customModule="Coder_Swag" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="120"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" rowHeight="140" id="VLV-dn-tQL" customClass="CategoryCell" customModule="Coder_Swag" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="140"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VLV-dn-tQL" id="TOc-A7-TkN">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digital" translatesAutoresizingMaskIntoConstraints="NO" id="yqj-cC-w9z">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
+                                                    <rect key="frame" x="0.0" y="5" width="375" height="130"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="130" id="Szn-Xz-JEf"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOODIES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fya-vK-RPr">
-                                                    <rect key="frame" x="112.5" y="50" width="150" height="20"/>
+                                                    <rect key="frame" x="112.5" y="60" width="150" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="JJd-6t-3sV"/>
                                                         <constraint firstAttribute="width" constant="150" id="m1b-fC-ObW"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -57,10 +61,10 @@
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="yqj-cC-w9z" secondAttribute="trailing" id="0Vr-l9-8oK"/>
                                                 <constraint firstItem="Fya-vK-RPr" firstAttribute="centerX" secondItem="TOc-A7-TkN" secondAttribute="centerX" id="Jqy-Wn-fzG"/>
-                                                <constraint firstAttribute="bottom" secondItem="yqj-cC-w9z" secondAttribute="bottom" id="oAk-LG-8Nt"/>
+                                                <constraint firstAttribute="bottom" secondItem="yqj-cC-w9z" secondAttribute="bottom" constant="5" id="oAk-LG-8Nt"/>
                                                 <constraint firstItem="yqj-cC-w9z" firstAttribute="leading" secondItem="TOc-A7-TkN" secondAttribute="leading" id="tnb-Eb-3d1"/>
                                                 <constraint firstItem="Fya-vK-RPr" firstAttribute="centerY" secondItem="TOc-A7-TkN" secondAttribute="centerY" id="uAF-2d-W7H"/>
-                                                <constraint firstItem="yqj-cC-w9z" firstAttribute="top" secondItem="TOc-A7-TkN" secondAttribute="top" id="x7b-R0-XwR"/>
+                                                <constraint firstItem="yqj-cC-w9z" firstAttribute="top" secondItem="TOc-A7-TkN" secondAttribute="top" constant="5" id="x7b-R0-XwR"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
